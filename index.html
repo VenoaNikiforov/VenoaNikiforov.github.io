@@ -19,32 +19,19 @@
         <form onSubmit="checkUname(); return false;">
             <label for="uname">Enter your username: </label>
             <input type="text" autofocus="autofocus" id="uname">
-            <input type="button" value="Submit" onclick="checkUname();" />
         
         <form onSubmit="checkPswd(); return false;">
             <label for="pswd"><br>Enter your password:</label>
             <input type="password" autofocus="autofocus" id="pswd">
-            <input type="button" value="Submit" onclick="checkPswd();" />
-            
-        <script type="text/javascript">
-            function checkUname() {
-                var confirmUname = "admin";
-                var username = document.getElementById("uname").value;
-                if (username == confirmUname && confirmPassword) {
-                     window.location="admin.html";
-                }
-            else {
-            document.getElementById("uname").value = "";
-            }
-            }
-        </script>
-
+            <input type="button" value="Submit" onclick="checkLogin();" />
 
         <script type="text/javascript">
-            function checkPswd() {
+            function checkLogin() {
                 var confirmPassword = "admin";
+                var confirmUsername = "admin";
                 var password = document.getElementById("pswd").value;
-                if (password == confirmPassword && confirmUname) {
+                var username = document.getElementById("uname").value;
+                if (password == confirmPassword && username == confirmUsername) {
                      window.location="admin.html";
                 }
             else {
