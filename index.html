@@ -21,6 +21,25 @@
             <input type="password" autofocus="autofocus" id="pswd">
             <input type="button" value="Submit" onclick="checkPswd();" />
         
+        <form onSubmit="checkUname(); return false;">
+            <label for="uname">Enter your username: </label>
+            <input type="text" autofocus="autofocus" id="uname">
+            <input type="button" value="Submit" onclick="checkUname();" />
+            
+        <script type="text/javascript">
+            function checkUname() {
+                var confirmUname = "admin";
+                var username = document.getElementById("uname").value;
+                if (username == confirmUname) {
+                     window.location="admin.html";
+                }
+            else {
+            document.getElementById("pswd").value = "";
+            }
+            }
+        </script>
+
+
         <script type="text/javascript">
             function checkPswd() {
                 var confirmPassword = "admin";
