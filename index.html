@@ -9,9 +9,29 @@
         </h1>
     </head>
     <body>
-        <p>
-            This is a chat website developed by RC'26 students! Credits to Venoa and Engelstadt.
-        </p>
+        <form onSubmit="checkPswd(); return false;">
+            <label for="pswd">Enter your password: </label>
+            <input type="password" autofocus="autofocus" id="pswd">
+            <input type="button" value="Submit" onclick="checkPswd();" />
+        
+        <script type="text/javascript">
+            function checkPswd() {
+                var confirmPassword = "admin";
+                var password = document.getElementById("pswd").value;
+                if (password == confirmPassword) {
+                     window.location="welcome.html";
+                }
+            else {
+            document.getElementById("pswd").value = "";
+            }
+            }
+        </script>
+
+</form>
+<p>
+    This is a chat website developed by RC'26 students! Credits to Venoa and Engelstadt.
+</p>
+
     </body>
     <form>
         <label for="email">Enter your email:</label>
