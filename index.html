@@ -30,11 +30,11 @@
             function checkUname() {
                 var confirmUname = "admin";
                 var username = document.getElementById("uname").value;
-                if (username == confirmUname) {
+                if (username == confirmUname && confirmPassword) {
                      window.location="admin.html";
                 }
             else {
-            document.getElementById("pswd").value = "";
+            document.getElementById("uname").value = "";
             }
             }
         </script>
@@ -44,7 +44,7 @@
             function checkPswd() {
                 var confirmPassword = "admin";
                 var password = document.getElementById("pswd").value;
-                if (password == confirmPassword) {
+                if (password == confirmPassword && confirmUname) {
                      window.location="admin.html";
                 }
             else {
