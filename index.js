@@ -8,4 +8,3 @@ function decrypt(message = '', key = ''){
 
     return decryptedMessage;
 }
-console.log();
