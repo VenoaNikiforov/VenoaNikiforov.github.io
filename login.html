@@ -42,11 +42,11 @@
         {
         var fso = new ActiveXObject("Scripting.FileSystemObject");
         var s = fso.CreateTextFile("C:\\login.txt", true);
-        .WriteLine(document.passForm.input.value);
+        s.WriteLine(document.passForm.input.value);
         s.Close();
         }
     </script>
-    
+
 
 
 </form> 
