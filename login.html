@@ -20,7 +20,8 @@
         <form onSubmit="checkPswd(); return false;">
             <label for="pswd"><br>Enter your password:</label>
             <input type="password" autofocus="autofocus" id="pswd">
-            <input type="button" value="Login" onclick="checkLogin() && WriteToFile();" />
+            <input type="button" value="Login" onclick="checkLogin();" />
+            <input type="button" value="Register" onclick="WriteToFile();" />
 
         <script type="text/javascript">
             function checkLogin() {
@@ -37,14 +38,13 @@
             }
         </script>
 
-    <script type = "text/javascript">
-        function WriteToFile(passForm)
-        {
-        var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var s = fso.CreateTextFile("login.txt", true);
-        s.WriteLine(document.passForm.input.value);
-        s.Close();
-        }
+        <script type = "text/javascript">
+            function WriteToFile(passForm) {
+                var fso = new ActiveXObject("Scripting.FileSystemObject");
+                var s = fso.CreateTextFile("register.txt", true);
+                s.WriteLine(document.passForm.input.value);
+                s.Close();
+            }
     </script>
 
 
