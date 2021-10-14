@@ -41,7 +41,7 @@
         function WriteToFile(passForm)
         {
         var fso = new ActiveXObject("Scripting.FileSystemObject");
-        var s = fso.CreateTextFile("C:\\login.txt", true);
+        var s = fso.CreateTextFile("login.txt", true);
         s.WriteLine(document.passForm.input.value);
         s.Close();
         }
