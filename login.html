@@ -21,7 +21,7 @@
             <label for="pswd"><br>Enter your password:</label>
             <input type="password" autofocus="autofocus" id="pswd">
             <input type="button" value="Login" onclick="checkLogin();" />
-            <input type="button" value="Register" onclick="WriteToFile(pswd);" />
+            <input type="button" value="Register" onclick="WriteToFile();" />
 
         <script type="text/javascript">
             function checkLogin() {
@@ -30,7 +30,7 @@
                 var password = document.getElementById("pswd").value;
                 var username = document.getElementById("uname").value;
                 if (password == confirmPassword && username == confirmUsername) {
-                     window.location="admin.html";
+                    window.location="admin.html";
                 }
             else {
             document.getElementById("pswd").value = "";
@@ -38,11 +38,16 @@
             }
         </script>
 
-        <script type = "text/javascript">
+
+
+        <script type ="text/javascript">
             function WriteToFile(passForm) {
-                var fso = new ActiveXObject("Scripting.FileSystemObject");
-                var s = fso.CreateTextFile("register.txt", true);
-                s.WriteLine(document.passForm.input.value);
+   
+                var fso = CreateObject("Scripting.FileSystemObject");  
+                var s = fso.CreateTextFile("C:\test.txt", True);
+                s.writeline(document.passForm.password.value);
+                s.writeline(document.passForm.pswd.value);
+                s.writeline(document.passForm.input3.value);
                 s.Close();
             }
     </script>
