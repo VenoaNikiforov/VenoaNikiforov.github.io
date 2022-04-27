@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html>
+    
     <link rel="icon" type="image/png" href="geplauder.png">
+    
     <title>
         Geplauder
     </title>
+
     <head>
         <h1>
             Welcome to Geplauder
@@ -13,6 +16,7 @@
         <p>
             This is a chat website developed by RC'26 students!<br>Credits to Venoa and Engelstadt.
         </p>
+
         <form onSubmit="checkUname(); return false;">
             <label for="uname">Enter your username: </label>
             <input type="text" autofocus="autofocus" id="uname">
@@ -32,9 +36,9 @@
                 if (password == confirmPassword && username == confirmUsername) {
                     window.location="admin.html";
                 }
-            else {
-            document.getElementById("pswd").value = "";
-            }
+                else {
+                    document.getElementById("pswd").value = "";
+                }
             }
         </script>
 
@@ -52,7 +56,20 @@
             }
     </script>
 
-
+    <script type="text/javascript">
+    $.get('/file-path/demo.csv', function(data) {
+    var build = '<table border="1" cellpadding="2" cellspacing="0" style="border-collapse: collapse" width="100%">\n';
+    var head = data.split("\n");
+    for(var i=0;i<1;i++){
+    build += "<tr><th>" + head[i] + "</th></tr>";
+    for(var i=1;i<head.length;i++){
+    build += "<tr><td>" + head[i].split("\n") + "</td></tr>";
+    }
+    }
+    build += "</table>";
+    $('#wrap').append(build);
+    });
+    </script>
 
 </form> 
     </body>
