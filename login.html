@@ -43,10 +43,10 @@
         </script>
 
 
-
-        <script type ="text/javascript">
+        <!-- not working, don't know why -->
+        <script type ="text/javascript"> 
             function WriteToFile(passForm) {
-   
+
                 var fso = CreateObject("Scripting.FileSystemObject");  
                 var s = fso.CreateTextFile("C:\test.txt", True);
                 s.writeline(document.passForm.password.value);
