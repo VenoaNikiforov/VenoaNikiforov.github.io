@@ -5,23 +5,28 @@ body {
     background-size: cover;
 }
 
-div.gallery {
+.gallery {
     margin: 5px;
     border: 1px solid #ccc;
     float: left;
     width: 180px;
 }
 
-div.gallery:hover {
+.gallery:hover {
     border: 1px solid #777;
 }
 
-div.gallery img {
+.gallery img {
     width: 100%;
     height: auto;
 }
 
-div.desc {
+.desc {
     padding: 15px;
     text-align: center;
+}
+
+.galimg {
+    width: 400px;
+    height: auto;
 }
