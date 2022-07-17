@@ -32,7 +32,35 @@ div.footer {
     bottom: 0;
     height: 50px;
     width: 100%;
-    background-color: rgb(127, 127, 127);
+    background-color: rgb(211, 211, 211);
     color: white;
     text-align: center;
-  }
+}
+
+a.maillink:link {
+
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+a.maillink:visited {
+
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+
+}
+
+a.maillink:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+a.maillink:active {
+    color: cyan;
+    background-color: transparent;
+    text-decoration: underline;
+}
