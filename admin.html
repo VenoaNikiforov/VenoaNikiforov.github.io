@@ -57,13 +57,13 @@
 
         function setDesc() {
             var pdesc = document.getElementsByClassName("desc");
-            var imggal = document.getElementsByClassName("galimg");
+            var imggal = document.getElementsByClassName("gallery");
             console.log(wdt)
             for (var i = 0; i < pdesc.length; i++) {
                 var wdt = imggal[i].offsetWidth;
                 var hgt = imggal[i].offsetHeight;
                 pdesc[i].style.right = (wdt - pdesc[i].clientWidth) / 2 + "px";
-                pdesc[i].style.top = (hgt) + "px";
+                pdesc[i].style.top = (hgt- pdesc[i].clientHeight) + "px";
             }
         }
 
