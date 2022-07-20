@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -57,19 +58,18 @@
         function setDesc() {
             var pdesc = document.getElementsByClassName("desc");
             var imggal = document.getElementsByClassName("galimg");
-            var wdt = imggal[0].offsetWidth;
-            var hgt = imggal[0].offsetHeight;
             console.log(wdt)
             for (var i = 0; i < pdesc.length; i++) {
-                pdesc[i].style.right = (wdt-pdesc[i].clientWidth)/2+"px";
-                pdesc[i].style.top = (hgt-12)+"px";
+                var wdt = imggal[i].offsetWidth;
+                var hgt = imggal[i].offsetHeight;
+                pdesc[i].style.right = (wdt - pdesc[i].clientWidth) / 2 + "px";
+                pdesc[i].style.top = (hgt - 12) + "px";
             }
         }
 
         window.onload = setDesc;
 
     </script>
-
 
 </body>
 
