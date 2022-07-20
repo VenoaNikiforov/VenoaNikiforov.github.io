@@ -11,6 +11,7 @@
 </head>
 
 <body>
+
     <h1>
         Geplauder Admins' Site
     </h1>
@@ -20,32 +21,51 @@
 
     <div class="gallery">
         <a target="_blank" href="c4.png">
-            <img src="c4.png" alt="Gut">
+            <img class="galimg" src="c4.png" alt="Gut">
         </a>
-        <div class="desc">Very good</div>
+        <p class="desc">Very good</p>
     </div>
 
     <div class="gallery">
         <a target="_blank" href="c4.png">
-            <img src="c4.png" alt="Gut">
+            <img class="galimg" src="c4.png" alt="Gut">
         </a>
-        <div class="desc">Very good</div>
+        <p class="desc">Very good</p>
     </div>
 
     <div class="gallery">
-        <a target="_blank" href="c4.png">
-            <img src="c4.png" alt="Gut">
+        <a target="_blank" href="d4.png">
+            <img class="galimg" src="d4.png" alt="404">
         </a>
-        <div class="desc">Very good</div>
+        <p class="desc">Very good</p>
     </div>
 
     <div class="footer">
 
-        <p>by <a href="mailto:venoa@protonmail.com" class="maillink">Venoa</a> and <a href="mailto:engelstadt@protonmail.com" class="maillink">Engelstadt</a></p>
+        <p>by <a href="mailto:venoa@protonmail.com" class="maillink">Venoa</a> and <a
+                href="mailto:engelstadt@protonmail.com" class="maillink">Engelstadt</a></p>
         <br>
         <a>2022 ©</a>
 
     </div>
+
+    <script>
+
+        function setDesc() {
+            var pdesc = document.getElementsByClassName("desc");
+            var imggal = document.getElementsByClassName("galimg");
+            var wdt = imggal[0].offsetWidth;
+            var hgt = imggal[0].offsetHeight;
+            console.log(wdt)
+            for (var i = 0; i < pdesc.length; i++) {
+                pdesc[i].style.right = (wdt-pdesc[i].clientWidth)/2+"px";
+                pdesc[i].style.top = (hgt-12)+"px";
+            }
+        }
+
+        window.onload = setDesc;
+
+    </script>
 
 
 </body>
