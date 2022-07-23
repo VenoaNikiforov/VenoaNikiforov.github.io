@@ -22,7 +22,7 @@
         Images:
     </h2>
 
-    <div class="gallery">
+    <div id="imgdiv1" class="gallery">
         <a target="_blank" href="c4.png">
             <img class="galimg" src="c4.png" alt="Gut">
         </a>
@@ -59,11 +59,16 @@
             var imggal = document.getElementsByClassName("galimg");
             var wdt = imggal[0].offsetWidth;
             var hgt = imggal[0].offsetHeight;
-            console.log(wdt)
             for (var i = 0; i < pdesc.length; i++) {
-                pdesc[i].style.right = (wdt-pdesc[i].clientWidth)/2+"px";
-                pdesc[i].style.top = (hgt-12)+"px";
+                pdesc[i].style.right = (wdt - pdesc[i].clientWidth) / 2 + "px";
+                pdesc[i].style.top = (hgt - 12) + "px";
             }
+
+            /*const div = document.getElementById('imgdiv1')
+            const clone = div.cloneNode(true);
+            clone.id = "foo2";
+            document.body.appendChild(clone);*/
+
         }
 
         window.onload = setDesc;
